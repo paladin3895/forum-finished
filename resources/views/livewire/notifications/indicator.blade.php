@@ -8,7 +8,7 @@
         </span>
 
     </div>
-    <span class="absolute top-0 right-0 px-1 text-xs text-white bg-blue-500 rounded-full">
+    <span class="absolute top-0 right-0 px-1 text-xs text-white bg-yellow-500 rounded-full">
         <livewire:notifications.count />
     </span>
     @endif

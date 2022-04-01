@@ -85,6 +85,14 @@ class User extends Authenticatable implements MustVerifyEmail, PointAble
         return $this->role_id ?: 1;
     }
 
+    public function getNameAttribute()
+    {
+        return collect([
+            $this->firstName,
+            $this->lastName,
+        ])->filter()->implode(' ');
+    }
+
     public function id(): int
     {
         return $this->id;

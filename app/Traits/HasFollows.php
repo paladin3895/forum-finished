@@ -21,7 +21,7 @@ trait HasFollows
 
     public function follows(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'follows', 'user_id', 'following_user_id')->withTimestamps();
+        return $this->belongsToMany(User::class, 'forum_follows', 'user_id', 'following_user_id')->withTimestamps();
     }
 
     public function followers()
@@ -31,7 +31,7 @@ trait HasFollows
 
     public function followerRelation(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'follows', 'following_user_id', 'user_id')->withTimestamps();
+        return $this->belongsToMany(User::class, 'forum_follows', 'following_user_id', 'user_id')->withTimestamps();
     }
 
     public function toggleFollow(User $user)

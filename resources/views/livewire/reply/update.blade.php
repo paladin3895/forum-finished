@@ -11,7 +11,7 @@
 
         <div x-show="!editReply" class="relative">
 
-            <div class="p-5 space-y-4 text-gray-500 bg-white border-l-4 border-blue-300 shadow">
+            <div class="p-5 space-y-4 text-gray-500 bg-white border-l-4 border-yellow-300 shadow">
                 <div class="grid grid-cols-8">
 
                     {{-- Avatar --}}
@@ -58,7 +58,7 @@
         <div x-show="editReply">
 
             <form wire:submit.prevent="updateReply">
-                <input class="w-full bg-gray-100 border-none shadow-inner focus:ring-blue-500" type="text" name="replyNewBody" wire:model.lazy="replyNewBody" x-ref="textInput" x-on:keydown.enter="editReply = false" x-on:keydown.escape="editReply = false">
+                <input class="w-full bg-gray-100 border-none shadow-inner focus:ring-yellow-500" type="text" name="replyNewBody" wire:model.lazy="replyNewBody" x-ref="textInput" x-on:keydown.enter="editReply = false" x-on:keydown.escape="editReply = false">
 
                 <div class="mt-2 space-x-3 text-sm">
                     <button type="button" class="text-green-400" x-on:click="editReply = false">

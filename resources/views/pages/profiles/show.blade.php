@@ -15,7 +15,7 @@
             </div>
 
             <div class="text-xs">
-                <h2 class="font-bold text-blue-500">Join Date:</h2>
+                <h2 class="font-bold text-yellow-500">Join Date:</h2>
                 <span class="text-gray-600">{{ $user->createdAt() }}</span>
             </div>
 
@@ -57,7 +57,7 @@
         <section class="flex flex-col col-span-3 gap-y-4">
             <x-alerts.main />
 
-            <span class="w-full p-2 font-bold text-blue-500 bg-white rounded shadow">
+            <span class="w-full p-2 font-bold text-yellow-500 bg-white rounded shadow">
                 Latest Threads
             </span>
 
@@ -67,7 +67,7 @@
                     {{-- Thread --}}
                     <div class="relative col-span-7 space-y-6">
                         <div class="space-y-3">
-                            <h2 class="text-xl tracking-wide hover:text-blue-400">
+                            <h2 class="text-xl tracking-wide hover:text-yellow-400">
                                 {{ $thread->title() }}
                             </h2>
                             <div class="text-gray-500">

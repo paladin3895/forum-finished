@@ -1,4 +1,7 @@
 const mix = require('laravel-mix');
+const webpack = require('webpack');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const path = require('path');
 
 /*
  |--------------------------------------------------------------------------
@@ -10,6 +13,29 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+
+mix.webpackConfig({
+    devtool: 'source-map',
+    resolve: {
+        alias: {
+
+        },
+        fallback: {
+            'path': false
+        }
+    },
+    plugins: [
+        // enable this plugin to analyze package size
+        // new BundleAnalyzerPlugin(),
+        new webpack.ProvidePlugin({
+            // $: 'jquery',
+            // jQuery: 'jquery',
+            // 'window.Quill': 'quill',
+            // 'Vue': 'vue',
+            // 'Vuex': 'vuex',
+        })
+    ]
+})
 
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [

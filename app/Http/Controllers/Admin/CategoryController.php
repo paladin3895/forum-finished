@@ -31,7 +31,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name'  => ['required', 'unique:categories'],
+            'name'  => ['required', 'unique:forum_categories'],
         ]);
 
         Category::create([
@@ -50,7 +50,7 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $this->validate($request, [
-            'name'  => ['required', 'unique:categories'],
+            'name'  => ['required', 'unique:forum_categories'],
         ]);
 
         $category->update([

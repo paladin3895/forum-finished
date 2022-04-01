@@ -3,6 +3,7 @@
 namespace App\Traits;
 
 use App\Models\Tag;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 trait HasTags
@@ -27,6 +28,6 @@ trait HasTags
 
     public function tagsRelation(): MorphToMany
     {
-        return $this->morphToMany(Tag::class, 'taggable')->withTimestamps();
+        return $this->morphToMany(Tag::class, 'taggable', 'forum_taggables')->withTimestamps();
     }
 }

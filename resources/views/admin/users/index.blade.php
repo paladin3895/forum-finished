@@ -10,7 +10,7 @@
     <section class="px-6">
         <div class="overflow-hidden border-b border-gray-200">
             <table class="min-w-full">
-                <thead class="bg-blue-500">
+                <thead class="bg-yellow-500">
                     <tr>
                         <x-table.head>Name</x-table.head>
                         <x-table.head>Bio</x-table.head>

@@ -36,6 +36,6 @@ class Tag extends Model
 
     public function threads(): MorphToMany
     {
-        return $this->morphedByMany(Thread::class, 'taggable');
+        return $this->morphedByMany(Thread::class, 'taggable', 'forum_taggables');
     }
 }

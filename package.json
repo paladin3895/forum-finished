@@ -21,6 +21,6 @@
         "tailwindcss": "^2.0.1"
     },
     "dependencies": {
-        "choices.js": "^9.0.1"
+        "choices.js": "^10.1.0"
     }
 }
