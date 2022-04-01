@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFollowsTable extends Migration
+class CreateForumFollowsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateFollowsTable extends Migration
      */
     public function up()
     {
-        Schema::create('follows', function (Blueprint $table) {
+        Schema::create('forum_follows', function (Blueprint $table) {
             $table->primary(['user_id', 'following_user_id']);
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('following_user_id')->constrained('users')->onDelete('cascade');
+            $table->unsignedInteger('user_id')->constrained('users')->onDelete('cascade');
+            $table->unsignedInteger('following_user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

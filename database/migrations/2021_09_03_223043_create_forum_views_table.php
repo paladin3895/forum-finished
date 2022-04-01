@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateViewsTable extends Migration
+class CreateForumViewsTable extends Migration
 {
     /**
      * The database schema.
@@ -42,7 +42,7 @@ class CreateViewsTable extends Migration
     public function up()
     {
         $this->schema->create($this->table, function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->morphs('viewable');
             $table->text('visitor')->nullable();
             $table->string('collection')->nullable();

@@ -80,6 +80,11 @@ class User extends Authenticatable implements MustVerifyEmail, PointAble
         'profile_photo_url',
     ];
 
+    public function getTypeAttribute()
+    {
+        return $this->role_id ?: 1;
+    }
+
     public function id(): int
     {
         return $this->id;

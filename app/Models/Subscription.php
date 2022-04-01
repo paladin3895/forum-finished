@@ -13,7 +13,7 @@ class Subscription extends Model
 {
     use HasFactory;
 
-    protected $table = 'subscriptions';
+    protected $table = 'forum_subscriptions';
 
     public function user(): User
     {

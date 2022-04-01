@@ -12,6 +12,8 @@ class Category extends Model
     use HasFactory;
     use HasTimestamps;
 
+    public $table = 'forum_categories';
+
     protected $fillable = ['name', 'slug'];
 
     public function threads(): HasMany

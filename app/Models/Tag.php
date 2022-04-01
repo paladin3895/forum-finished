@@ -12,7 +12,7 @@ class Tag extends Model
     use HasFactory;
     use HasTimestamps;
 
-    protected $table = 'tags';
+    protected $table = 'forum_tags';
 
     protected $fillable = [
         'name',

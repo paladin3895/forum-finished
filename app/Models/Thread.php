@@ -28,7 +28,7 @@ class Thread extends Model implements ReplyAble, SubscriptionAble, Viewable
     use HasSubscriptions;
     use InteractsWithViews;
 
-    const TABLE = 'threads';
+    const TABLE = 'forum_threads';
 
     protected $table = self::TABLE;
 

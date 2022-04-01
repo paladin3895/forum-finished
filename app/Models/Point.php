@@ -10,7 +10,7 @@ class Point extends Model
 {
     use HasFactory;
 
-    const TABLE = 'points';
+    const TABLE = 'forum_points';
 
     protected $table = self::TABLE;
 

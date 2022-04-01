@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePointsTable extends Migration
+class CreateForumTaggablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreatePointsTable extends Migration
      */
     public function up()
     {
-        Schema::create('points', function (Blueprint $table) {
-            $table->id();
-            $table->integer('amount');
-            $table->text('message');
-            $table->unsignedInteger('current_points');
-            $table->morphs('pointable');
+        Schema::create('forum_taggables', function (Blueprint $table) {
+            $table->increments('id');
+            $table->unsignedInteger('tag_id')->constrained('forum_tags');
+            $table->morphs('taggable');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreatePointsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('points');
+        Schema::dropIfExists('taggables');
     }
 }

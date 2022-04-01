@@ -20,7 +20,7 @@ final class Reply extends Model
     use HasTimestamps;
     use ModelHelpers;
 
-    const TABLE = 'replies';
+    const TABLE = 'forum_replies';
 
     /**
      * {@inheritdoc}

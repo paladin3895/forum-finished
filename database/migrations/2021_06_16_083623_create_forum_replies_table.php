@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateThreadsTable extends Migration
+class CreateForumRepliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateThreadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('threads', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
+        Schema::create('forum_replies', function (Blueprint $table) {
+            $table->increments('id');
             $table->text('body');
-            $table->string('slug');
-            $table->foreignId('author_id')->constrained('users');
-            $table->foreignId('category_id')->constrained('categories');
+            $table->integer('replyable_id');
+            $table->string('replyable_type')->default('');
+            $table->unsignedInteger('author_id')->constrained('users');
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ class CreateThreadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('threads');
+        Schema::dropIfExists('replies');
     }
 }
