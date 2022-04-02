@@ -10,7 +10,7 @@
     <section class="px-6">
         <div class="overflow-hidden border-b border-gray-200">
             <table class="min-w-full">
-                <thead class="bg-yellow-500">
+                <thead class="bg-primary-500">
                     <tr>
                         <x-table.head>Id</x-table.head>
                         <x-table.head>Name</x-table.head>
@@ -38,7 +38,7 @@
                         <x-table.data>
                             <div class="flex justify-center space-x-4">
 
-                                <a href="{{ route('admin.tags.edit', $tag) }}" class="text-yellow-400">
+                                <a href="{{ route('admin.tags.edit', $tag) }}" class="text-primary-400">
                                     <x-zondicon-edit-pencil class="w-5 h-5" />
                                 </a>
 

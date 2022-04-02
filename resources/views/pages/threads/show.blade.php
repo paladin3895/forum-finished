@@ -20,7 +20,7 @@
                     {{-- Thread --}}
                     <div class="relative col-span-7 space-y-6">
                         <div class="space-y-3">
-                            <h2 class="text-xl tracking-wide hover:text-blue-400">
+                            <h2 class="text-xl tracking-wide hover:text-primary-400">
                                 {{ $thread->title() }}
                             </h2>
                             <div class="text-gray-500">
@@ -36,7 +36,7 @@
 
                                 {{-- View Count --}}
                                 <div class="flex items-center space-x-2">
-                                    <x-heroicon-o-eye class="w-4 h-4 text-blue-300" />
+                                    <x-heroicon-o-eye class="w-4 h-4 text-primary-300" />
                                     <span class="text-xs text-gray-500">{{ views($thread)->count() }}</span>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                 <h2 class="text-gray-500">Post a reply</h2>
                 <x-form action="{{ route('replies.store') }}">
                     <div>
-                        <input type="text" name="body" class="w-full bg-gray-200 border-none shadow-inner focus:ring-blue-400" />
+                        <input type="text" name="body" class="w-full bg-gray-200 border-none shadow-inner focus:ring-primary-400" />
                         <x-form.error for="body" />
 
                         <input type="hidden" name="replyable_id" value="{{ $thread->id() }}">
@@ -100,7 +100,7 @@
                 </x-form>
             </div>
             @else
-            <div class="flex justify-between p-4 text-gray-700 bg-blue-200 rounded">
+            <div class="flex justify-between p-4 text-gray-700 bg-primary-200 rounded">
                 <h2>Please login to leave a comment</h2>
                 <a href="{{ route('login') }}">Login</a>
             </div>

@@ -1,4 +1,4 @@
-<div class="p-5 space-y-4 text-gray-500 bg-white border-l-4 border-blue-300 shadow">
+<div class="p-5 space-y-4 text-gray-500 bg-white border-l-4 border-primary-300 shadow">
     <div class="grid grid-cols-8">
 
         {{-- Avatar --}}

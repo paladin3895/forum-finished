@@ -1,7 +1,7 @@
 <div class="overflow-hidden border-b border-gray-200">
     @if (!$notifications->isEmpty())
     <table class="min-w-full">
-        <thead class="bg-yellow-500">
+        <thead class="bg-primary-500">
             <tr>
                 <x-table.head>Message</x-table.head>
                 <x-table.head>Date</x-table.head>
@@ -15,7 +15,7 @@
                 <x-table.data>
                     <div>
                         A new reply was add to
-                        <a href="{{ route('replies.replyAble', [$notification->data['replyable_id'], $notification->data['replyable_type']]) }}" class="ml-2 font-bold text-yellow-500">
+                        <a href="{{ route('replies.replyAble', [$notification->data['replyable_id'], $notification->data['replyable_type']]) }}" class="ml-2 font-bold text-primary-500">
                             {{-- {{ $notification->data['replyable_subject'] }} --}}
                             {{ dd($notification) }}
                         </a>

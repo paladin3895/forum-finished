@@ -24,7 +24,7 @@
                                 {{-- Category --}}
                                 <div>
                                     <x-form.label for="category" value="{{ __('Category') }}" />
-                                    <select name="category" id="category" class="w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                                    <select name="category" id="category" class="w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50">
                                         @foreach ($categories as $category)
                                         <option value="{{ $category->id() }}" @if($category->id() == $selectedCategory->id) selected @endif>
                                             {{ $category->name() }}
@@ -37,7 +37,7 @@
                                 {{-- Tags --}}
                                 <div>
                                     <x-form.label for="tags" value="{{ __('Tags') }}" />
-                                    <select name="tags[]" id="tags" x-data="{}" x-init="function () { choices($el) }" class="w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" multiple>
+                                    <select name="tags[]" id="tags" x-data="{}" x-init="function () { choices($el) }" class="w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50" multiple>
                                         @foreach ($tags as $tag)
                                         <option value="{{ $tag->id() }}" @if(in_array($tag->id(), $oldTags)) selected @endif
                                             >

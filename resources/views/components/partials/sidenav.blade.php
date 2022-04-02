@@ -3,7 +3,7 @@
     <div class="p-4 space-y-4 bg-white shadow">
         <div>
             {{-- Start Discusson Button --}}
-            <a href="{{ route('threads.create') }}" class="inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase transition bg-yellow-500 border border-transparent rounded hover:bg-yellow-400 active:bg-yellow-600 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25" }}>
+            <a href="{{ route('threads.create') }}" class="inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase transition bg-primary-500 border border-transparent rounded hover:bg-primary-400 active:bg-primary-600 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25" }}>
                 {{ __('Start a new discussion') }}
             </a>
         </div>
@@ -67,7 +67,7 @@
         <ul class="space-y-4 text-gray-500">
             <li>
                 <a href="#" class="flex items-center space-x-2">
-                    <x-heroicon-s-star class="w-5 h-5 text-yellow-500" />
+                    <x-heroicon-s-star class="w-5 h-5 text-primary-500" />
                     <span>Popular this week</span>
                 </a>
             </li>
@@ -79,7 +79,7 @@
             </li>
             <li>
                 <a href="#" class="flex items-center space-x-2">
-                    <x-heroicon-s-chat class="w-5 h-5 text-yellow-400" />
+                    <x-heroicon-s-chat class="w-5 h-5 text-primary-400" />
                     <span>No replies yet</span>
                 </a>
             </li>

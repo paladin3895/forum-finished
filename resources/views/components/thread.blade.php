@@ -11,7 +11,7 @@
         <div class="col-span-6 space-y-4">
 
             <a href="{{ route('threads.show', [$thread->category->slug(), $thread->slug()]) }}" class="space-y-2">
-                <h2 class="text-xl tracking-wide hover:text-blue-400">
+                <h2 class="text-xl tracking-wide hover:text-primary-400">
                     {{ $thread->title() }}
                 </h2>
                 <p class="text-gray-500">
@@ -36,7 +36,7 @@
 
                 {{-- Views Count --}}
                 <div class="flex items-center space-x-2">
-                    <x-heroicon-o-eye class="w-4 h-4 text-blue-300" />
+                    <x-heroicon-o-eye class="w-4 h-4 text-primary-300" />
                     <span class="text-xs text-gray-500">{{ views($thread)->count() }}</span>
                 </div>
 
