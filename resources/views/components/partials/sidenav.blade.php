@@ -51,7 +51,9 @@
                     <li>
                         <a href="/{{ $category->slug }}" class="flex items-center justify-between">
                             {{ $category->name }}
-                            <span class="px-2 text-white bg-green-300 rounded">45</span>
+                            <span class="px-2 text-white bg-green-300 rounded">
+                                {{ $category->threads()->count() }}
+                            </span>
                         </a>
                     </li>
                 @endforeach
