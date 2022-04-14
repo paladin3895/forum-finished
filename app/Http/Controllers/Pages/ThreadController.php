@@ -26,10 +26,15 @@ class ThreadController extends Controller
         return $this->middleware([Authenticate::class, EnsureEmailIsVerified::class])->except(['index', 'show']);
     }
 
-    public function index()
+    public function index(Request $request)
     {
+        $threads = Thread::orderBy('id', 'desc');
+        if ($categoryId = $request->get('category')) {
+            $threads->where('category_id', $categoryId);
+        }
+
         return view('pages.threads.index', [
-            'threads'       => Thread::orderBy('id', 'desc')->paginate(10),
+            'threads'       => $threads->paginate(10),
         ]);
     }
 
